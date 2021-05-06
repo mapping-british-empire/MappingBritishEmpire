@@ -5,10 +5,14 @@ The MakeMapsInShiny directory includes the scripts to make Shiny maps, the data 
 
 To view the maps, download the MakeMapsInShiny directory. You will also need to [install RStudio](https://www.rstudio.com/products/rstudio/download/).
 
-To run the interactive Shiny app and create your own maps, [set your working directory](https://www.ucl.ac.uk/~uctqiax/PUBLG100/2015/faq/setwd.html) to the MakeMapsInShiny directory. Then, enter the command runApp:
+To run the interactive Shiny app and create your own maps, [set your working directory](https://www.ucl.ac.uk/~uctqiax/PUBLG100/2015/faq/setwd.html) to the MakeMapsInShiny directory. Then, run the app:
+```
 runApp()
+```
 If the command is not recognized, you may need to load the Shiny library:
+```
 library(shiny)
+```
 There are several packages you may have to download before the app will work.
 
 The Shiny app contains some instructions on making the maps. Note that you may combine multiple texts in one map, but that you may not combine the CLIWOC and Slave Voyages databases nor combine those databases with texts. When combining texts, the raw counts are added together, so long texts (particularly Green's collection) may overwhelm short ones. If you click on a node on the map, the app displays the component place names and their respective counts. 
