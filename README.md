@@ -1,4 +1,4 @@
-# MappingBritishEmpire
+# Mapping the Real and Imaginary Maritime British Empire
 This repository contains the files used in the article "Four Theses on the Real and Imaginary British Empire, 1719-1829," along with instructions for how to recreate the maps in Shiny.
 
 The MakeMapsInShiny directory includes the scripts to make Shiny maps, the data used to make the maps--mappable versions of the [CLIWOC](https://webs.ucm.es/info/cliwoc/) and [Slave Voyages](https://www.slavevoyages.org) data, and a .tsv for each text of all the place names my Stanford NER model identified. The CLIWOC data was restricted to just British voyages; the Slave Voyages data was restricted to British voyages after 1750, and excludes the ports of return.
