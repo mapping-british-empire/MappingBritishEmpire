@@ -1,0 +1,29 @@
+# to tokenize file
+
+java -cp stanford-ner.jar edu.stanford.nlp.process.PTBTokenizer StanfordNERTraining.txt > StanfordNERTraining.tok
+
+# to turn file into .tsv for tagging
+
+perl -ne 'chomp; print "$_\tO\n"' StanfordNERTraining.tok > StanfordNERTraining.tsv
+
+# tag the .tsv manually
+
+# do the above commands with the test set as well and tag it
+
+
+# this command trains a model for fine-tuning the inputs
+# this .prop file refers to the training .tsv -- open and manually change that line to change your training set
+# you can also change the parameters of the NER trainer. See the Stanford NER  FAQ for details.
+
+java -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -prop NVL_2021.prop
+
+#test the model
+
+java -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier NVL-2021-ner-model.ser.gz -testFile StanfordNERTesting2021.tsv
+
+#to process texts, use a command like the following, replacing the loadClassifier filename with your classifier's name, the textFile with your file, and the name after the > with the name of your outputted file
+#note that the MakeMapsFromData script needs files of the format outputted by this command
+
+java -mx2g -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier NVL-2021-ner-model.ser.gz -textFile Hawkesworth_All.txt > Hawkesworth_All.txt_SUNER2021.tsv -outputFormat tsv
+
+
