@@ -1,5 +1,5 @@
 # Mapping the Real and Imaginary Maritime British Empire
-This repository contains the files used in the article "Four Theses on the Real and Imaginary British Empire, 1719-1829," along with instructions for how to recreate the maps in Shiny.
+This repository contains the files used in the article "Four Theses on the Real and Imaginary British Empire, 1697-1829," along with instructions for how to recreate the maps in Shiny.
 
 The TechnicalAppendix_RealImaginaryEmpire Word document explains how the maps were generated, lists the packages used, shows the sources of the text files, and includes statistics comparing the model's performance to the base Stanford NER and to Matthew Wilkens's 2013 results, repeating some of the explanation from the article.
 
